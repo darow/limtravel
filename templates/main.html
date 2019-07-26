@@ -2,199 +2,173 @@
 
 <!doctype html>
 <html lang="en">
-    <head>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/custom-style.css' %}">
+    <title>demo</title>
+</head>
+<body>
+<nav class="navbar navbar-default fixed-top navbar-expand-md bg-white inline-block navbar-light" >
+    <table>
+        <div class="containter navbar-collapse collapse w-100 order-1 order-md-0 collapse1 text-left">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/tourist_visas">Туристические визы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/long-term_visas">Деловые визы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/international_passport">Загранпаспорт</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/invitations">Приглашения</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container flex-nowrap">
+        <div class="mr-auto order-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse1">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="mx-auto">
+            <a class="navbar-brand mx-auto" href="/">
+                <img src="{% static "../assets/img/logo.png" %}" class="image" height="70" alt="logo">
+            </a>
+        </div>
 
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-        <title>demo</title>
-    </head>
-    <style>
-    .navbar-light .navbar-toggler{
-        background-image: {% static "user.svg" %}
-    }
-    image {
-        display: block;
-        width: auto;
-        height: 100%;
-    }
-    body {
-        padding-top: 113px;
-    }
-    hr {
-        border-color:#EE8019;
-        width: 60px;
-    }
-    a:active, a:hover {
-        color: #f5dd5d;
-    }
-    a {
-        color: #000000;
-    }
-    </style>
-    <body>
-        <nav class="navbar navbar-default fixed-top navbar-expand-md bg-white inline-block navbar-light" >
-            <table>
-            <div class="containter navbar-collapse collapse w-100 order-1 order-md-0 collapse1 text-left">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Главная</a>
+        <div class="ml-auto order-1">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse2">
+                <img src="{% static "../assets/img/user.svg" %}" class="image" height="30" alt="user">
+            </button>
+        </div>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-3 collapse2 text-right">
+            <ul class="navbar-nav ml-auto">
+                {% if username %}
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="/account/logout/">{{ username }}</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/tourist_visas">Туристические визы</a>
+                        <a class="nav-link" href="/account/logout/">Выйти</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/long-term_visas">Деловые визы</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/international_passport">Загранпаспорт</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/invitations">Приглашения</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="mr-auto order-0">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse1">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            <div class="mx-auto">
-                <a class="navbar-brand mx-auto" href="/">
-                    <img src="{% static "logo.png" %}" class="image" height="70" alt="logo">
-                </a>
-            </div>
-
-            <div class="ml-auto order-1">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse2">
-                    <img src="{% static "user.svg" %}" class="image" height="30" alt="user">
-                </button>
-            </div>
-            <div class="navbar-collapse collapse w-100 order-3 collapse2 text-right">
-                <ul class="navbar-nav ml-auto">
-                    {% if username %}
-                        <li class="nav-item">
-                            <a class="nav-link disabled" href="/account/logout/">{{ username }}</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/account/logout/">Выйти</a>
-                        </li>
-                    {% else %}
+                {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="/account/login">Войти</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/account/register">Регистрация</a>
                     </li>
-                    {% endif %}
-                </ul>
+                {% endif %}
+            </ul>
+        </div>
+    </table>
+</nav>
+
+{% block register %} {% endblock %}
+{%  block check %} {% endblock %}
+{% block login %} {% endblock %}
+{% block main_page %} {% endblock %}
+
+<footer class="page-footer font-small unique-color-light">
+    <div style="background-color: #1D91D0;">
+        <div class="container">
+            <ul class="pt-3 list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/%D0%92%D0%B8%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9-%D1%86%D0%B5%D0%BD%D1%82%D1%80-246433339345947/"
+                       class="btn-floating btn-fb mx-1">
+                        <img src="{% static "../assets/img/facebook.svg" %}" width="50" height="50" alt="facebook_logo">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://vk.com/limtravel" class="btn-floating btn-tw mx-1">
+                        <img src="{% static "../assets/img/vk.svg" %}" width="50" height="50" alt="vk_logo">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://instagram.com/lim_travel24"
+                       class="btn-floating btn-gplus mx-1">
+                        <img src="{% static "../assets/img/instagram.svg" %}" width="50" height="50" alt="instagram_logo">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <img src="{% static "../assets/img/call.svg" %}" width="30" height="30" class="float-left pr-2" alt="phone_image">
+            <div class="container ml-20">
+                <h4 class="text-uppercase font-weight-bold">8(800) 511-83-41</h4>
             </div>
-            </table>
-        </nav>
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">lim travel</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="border-color:#EE8019; width: 60px;">
+                    <p>Федеральная сеть визовых центров. Открыта в 2018 году. Специализируемся на выдаче виз, загранпаспортов, рабочих приглашений.</p>
 
-        {% block register %} {% endblock %}
-        {%  block check %} {% endblock %}
-        {% block login %} {% endblock %}
-        {% block main_page %} {% endblock %}
-
-        <footer class="page-footer font-small unique-color-light">
-            <div style="background-color: #1D91D0;">
-                <div class="container">
-                    <div class="py-2 container text-center ">
-                    </div>
-                    <ul class="list-unstyled list-inline text-center">
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/%D0%92%D0%B8%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9-%D1%86%D0%B5%D0%BD%D1%82%D1%80-246433339345947/"
-                               class="btn-floating btn-fb mx-1">
-                                <img src="{% static "facebook.svg" %}" width="50" height="50" alt="facebook_logo">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://vk.com/limtravel" class="btn-floating btn-tw mx-1">
-                                <img src="{% static "vk.svg" %}" width="50" height="50" alt="vk_logo">
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://instagram.com/lim_travel24"
-                               class="btn-floating btn-gplus mx-1">
-                                <img src="{% static "instagram.svg" %}" width="50" height="50" alt="instagram_logo">
-                            </a>
-                        </li>
-                    </ul>
                 </div>
-                <div class="container">
-                    <img src="{% static "call.svg" %}" width="30" height="30" class="float-left pr-2" alt="phone_image">
-                    <div class="container ml-20">
-                    <h4 class="text-uppercase font-weight-bold">8(800) 511-83-41</h4>
-                    </div>
-                    <div class="row mt-1">
-                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                            <h6 class="text-uppercase font-weight-bold">lim travel</h6>
-                            <hr class="mb-4 mt-0 d-inline-block mx-auto" style="border-color:#EE8019; width: 60px;">
-                            <p>Федеральная сеть визовых центров. Открыта в 2018 году. Специализируемся на выдаче виз, загранпаспортов, рабочих приглашений.</p>
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
+                    <h6 class="text-uppercase font-weight-bold">Products</h6>
 
-                        </div>
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">
-                            <h6 class="text-uppercase font-weight-bold">Products</h6>
-
-                            <hr class="black accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <a href="#!">Content</a>
-                            </p>
-                            <p>
-                                <a href="#!">Content</a>
-                            </p>
-                            <p>
-                                <a href="#!">Content</a>
-                            </p>
-                            <p>
-                                <a href="#!">Content Content</a>
-                            </p>
-                        </div>
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 class="text-uppercase font-weight-bold">Useful links</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto">
-                            <p>
-                                <a href="#!">О нас</a>
-                            </p>
-                            <p>
-                                <a href="#!">Оплата</a>
-                            </p>
-                            <p>
-                                <a href="#!">Контакты</a>
-                            </p>
-                        </div>
-                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 class="text-uppercase font-weight-bold">Филиалы</h6>
-                            <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                            <p>
-                                <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                            <p>
-                                <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                            <p>
-                                <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                            <p>
-                                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-                        </div>
-                    </div>
+                    <hr class="black accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Content</a>
+                    </p>
+                    <p>
+                        <a href="#!">Content</a>
+                    </p>
+                    <p>
+                        <a href="#!">Content</a>
+                    </p>
+                    <p>
+                        <a href="#!">Content Content</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+                    <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
+                    <p>
+                        <a href="#!">О нас</a>
+                    </p>
+                    <p>
+                        <a href="#!">Оплата</a>
+                    </p>
+                    <p>
+                        <a href="#!">Контакты</a>
+                    </p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Филиалы</h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                    <p>
+                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                    <p>
+                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                    <p>
+                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
                 </div>
             </div>
-            <div style="background-color: #FACE0E;" class="footer-copyright text-center py-3">
-                © 2018-2019 Company Inc. Все права защищены.
+        </div>
+    </div>
+    <div style="background-color: #FACE0E;" class="footer-copyright text-center py-3">
+        © 2018-2019 Company Inc. Все права защищены.
+    </div>
+</footer>
 
-            </div>
-        </footer>
 
 
-
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
 </html>

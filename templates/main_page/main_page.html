@@ -1,13 +1,143 @@
 {% extends 'main.html' %}
-
 {% load static %}
 
 
 
 {%  block main_page %}
-    <div background: {% static "background_main.jpg" %};>
-        ыыыыыыыыыыыыыыыыыыыыыыыыыыы
+    <div class="bg mn_img">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
+                <div class="col big-font pr-5">
+                    Визы в 45 стран<br>
+                    мира
+                </div>
+                <div class="col pl-5">
+                    <h2>Срочное оформление<br>
+                        визы за 3 дня</h2>
+                    <form class="form-inline">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="inputPassword2" class="sr-only">Password</label>
+                            <input type="text" class="form-control" id="inputPassword2" placeholder="Введите телефон">
+                        </div>
+                        <button type="submit" class="btn btn-primary mb-2">Отправить</button>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
     </div>
-    <h1>ssssssssss</h1>
+    <div class="container  pt-5">
+        <div class="row h-100">
+            <div class="col p-5 text-center">
+                <div class=" big-font">7349
+                    <hr>
+                </div>
+                Выданных виз за год
+            </div>
+            <div class="col p-5 text-center">
+                <div class=" big-font">
+                    174
+                    <hr>
+                </div>
+                Клиента в день
+            </div>
+            <div class="col p-5 text-center">
+                <div class=" big-font">
+                    45
+                    <hr>
+                </div>
+                Стран Мира
+            </div>
+        </div>
+        <div class="row h-100 p-2">
+            <div class="col big-font text-center font-weight-bold">
+                Наши клиенты
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col text-center pb-5">
+                <h5>Реальные люди с настоящими визами</h5>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="container testimonial-group pb-5">
+                <div class="row flex-nowrap">
+                    <div class="col-sm-4"><img class="d-block image client" src={% static 'img/clients/1.png' %} center >
+                        <h5 class="font-weight-bold">Попов Николай</h5>
+                        <p style="white-space: pre-line;">Получил Шенгенскую визу на 1 год, мультивиза Франция.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/2.png' %} >
+                        <h5 class="font-weight-bold">Иво Янсон</h5>
+                        <p style="white-space: pre-line;">Получил Шенгенскую визу на 4 года, мультивиза Франция.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/3.png' %} >
+                        <h5 class="font-weight-bold">Любовь Лешенкова</h5>
+                        <p style="white-space: pre-line;">Получила Шенгенскую визу на 5 лет, мультивиза Франция.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/4.png' %} >
+                        <h5 class="font-weight-bold">Ястебова Ольга</h5>
+                        <p style="white-space: pre-line;">Получила Шенгенскую визу на 5 лет , мультивиза Франция.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/5.png' %} >
+                        <h5 class="font-weight-bold">Краснощенков Г.</h5>
+                        <p style="white-space: pre-line;">Получил Шенгенскую визу на 5 лет, мультивиза Франция.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/6.png' %} >
+                        <h5 class="font-weight-bold">Лекомцева Вера</h5>
+                        <p style="white-space: pre-line;">Получил Шенгенскую визу на 6 месяцев, мультивиза Франция.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/7.png' %} >
+                        <h5 class="font-weight-bold">Георгий Сурин</h5>
+                        <p style="white-space: pre-line;">Получил Шенгенскую визу на 1 год.</p>
+                    </div>
+                    <div class="col-sm-4"><img class="image client mx-auto" src={% static 'img/clients/8.png' %} >
+                        <h5 class="font-weight-bold">Анастасия И.</h5>
+                        <p style="white-space: pre-line;">Виза во Францию на полгода. Доставили визу на дом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex p-5" style="background-color: #1D91D0"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center big-font font-weight-bold p-3">
+                Видеоотзывы
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <h4>Мнения о нашей работе</h4>
+            </div>
+        </div>
+        <div class="row p-5">
+            <div class="col ">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe  src="//www.youtube.com/embed/lrUz0TiJMZo" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="//www.youtube.com/embed/rIDCo9ALPzo" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countainer">
+        <div class="row">
+            <div class="col">
+                <div class="big-font text-center">
+                Наши преимущества
+                    </div>
+            </div>
+        </div>
+    </div>
+
+
+
 
 {% endblock main_page %}
