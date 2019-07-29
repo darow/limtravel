@@ -5,7 +5,6 @@ image {
 }
 .client {
     height: 200px;
-    display: block;
 }
 body {
     font-family: Helvetica;
@@ -54,28 +53,33 @@ a {
 }
 @media (min-width: 0px) {
     .big-font {
+        font-weight: bold;
         font-size: 20px;
     }
 }
 @media (min-width: 320px) {
     .big-font {
+        font-weight: bold;
         font-size: 40px;
     }
 }
 @media (min-width: 768px) {
     .big-font {
+        font-weight: bold;
         font-size: 40px;
     }
 }
 /* на md */
 @media (min-width: 992px) {
     .big-font {
+        font-weight: bold;
         font-size: 45px;
     }
 }
 /* на lg */
 @media (min-width: 1200px) {
     .big-font {
+        font-weight: bold;
         font-size: 50px;
     }
 }

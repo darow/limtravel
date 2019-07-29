@@ -130,11 +130,123 @@
     <div class="countainer">
         <div class="row">
             <div class="col">
-                <div class="big-font text-center">
-                Наши преимущества
-                    </div>
+                <div class="big-font text-center pb-5">
+                    Наши преимущества
+                </div>
             </div>
         </div>
+        <div class="row text-center p-5">
+            <div class="col ">
+                <img class="image" src={% static 'img/registration-form.svg' %} height="60" >
+                <h4 class="font-weight-bold p-4">Любая прописка</h4>
+                <h6>Работаем со всеми регионами РФ</h6>
+            </div>
+            <div class="col ">
+                <img class="image" src={% static 'img/refuse.svg' %} height="60" >
+                <h4 class="font-weight-bold p-4">Визы после отказа</h4>
+                <h6>Помощь в получении визы даже после отказа</h6>
+            </div>
+            <div class="col ">
+                <img class="image" src={% static 'img/stopwatch.svg' %} height="60" >
+                <h4 class="font-weight-bold p-4">Экспресс-виза</h4>
+                <h6>Срочное оформление визы от 1-го дня</h6>
+            </div>
+            <div class="col ">
+                <img class="image" src={% static 'img/shipped.svg' %} height="60" >
+                <h4 class="font-weight-bold p-4">Доставка на дом</h4>
+                <h6>Доставим визу на дом в течение 24 часов</h6>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col big-font text-center p-5">
+                Часто задаваемые вопросы
+            </div>
+        </div>
+    </div>
+
+    <div id="accordion">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Что такое Экспресс-визы?
+                    </button>
+                </h5>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Экспресс-виза - это тип визы в страны шенгенского соглашения. Оформляется по экспресс рассмотрению, в случае, если Вы выкупили билет и подали документы за 3 рабочих дня до вылета.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Где открывают визы?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Чтобы получить визу, нужно сдать документы в консульство. На шенгенскую визу обычно подают в представительство страны, где будете проводить больше времени.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Что такое мультивиза?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Это документ, который разрешает когда захочется и сколько захочется раз въезжать в страну. Часто имеется в виду виза в Европейский союз, выдается сроком от полугода до 5 лет.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Как получить шенген?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                <div class="card-body">
+                    С нашей помощью Вы можете получить шенгенскую визу легко и быстро: заполнить опросный лист, в котором напишете на русском языке сведения о себе, а  аккредитованный сотрудник  заполнит вашу анкету. Все необходимые документы и справки будут заранее проверены компетентным специалистом, и если обнаружатся недочеты, Вас попросят их исправить до подачи в посольство. Набор документов  для получения шенгена будет минимален, обо всем остальном позаботимся мы.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        Как получить приглашение на работу за рубеж?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                <div class="card-body">
+                    После того как Вы нашли подходящую вакансию за рубежом, успешно прошли собеседование и получили устное согласие о принятии на работу, необходимо позаботиться о  выдаче приглашения на работу (или Job offer). Джоб оффер выглядит как официальное обращение к будущему работнику, отпечатанное на фирменном бланке и заверенное работодателем.
+                    В приглашении содержится следующий текст:
+                    ФИО соискателя;
+                    название предлагаемой должности;
+                    указывается будущий непосредственный руководитель;
+                    прописываются должностные обязанности будущего сотрудника; адрес будущего места работы;
+                    величина заработной платы;
+                    особенности испытательного срока (если он будет иметь место);
+                    график работы;
+                    льготы или компенсации;
+                    срок действия приглашения.
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
