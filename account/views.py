@@ -16,7 +16,7 @@ def register(request):
     args = {'form': form}
     args.update(csrf(request))
 
-    return render_to_response('register.html', args)
+    return render_to_response('account/register.html', args)
 
 
 def login(request):
@@ -31,10 +31,10 @@ def login(request):
             return redirect('/account/check')
         else:
             args['login_error'] = "Пользователь не найден"
-            return render_to_response('login.html', args)
+            return render_to_response('account/login.html', args)
 
     else:
-        return render_to_response('login.html', args)
+        return render_to_response('account/login.html', args)
 
 
 def logout(request):
@@ -44,4 +44,4 @@ def logout(request):
 
 def check(request):
     data = {'username': auth.get_user(request).username}
-    return render_to_response('check.html', data)
+    return render_to_response('account/check.html', data)

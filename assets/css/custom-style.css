@@ -1,0 +1,87 @@
+image {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+.client {
+    height: 200px;
+}
+body {
+    font-family: Helvetica;
+    font-size: 14px;
+    height: 100%;
+    padding-top: 113px;
+}
+html {
+    height: 100%;
+}
+
+hr {
+    border-color:#EE8019;
+    width: 60px;
+}
+a:active, a:hover {
+    color: #f5dd5d;
+}
+a {
+    color: #000000;
+}
+.testimonial-group > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.testimonial-group > .row > .col-sm-4 {
+    display: inline-block;
+    float: none;
+}
+.testimonial-group > .row > .col-sm-4 > .fixed-size {
+    height: 200px;
+
+}
+
+.bg {
+    height: 130%;
+}
+.mn_img {
+    background: url('/assets/img/bgr-mn.jpg') no-repeat center;
+    background-size: cover;
+}
+.flex-nowrap {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    flex-wrap: nowrap;
+}
+@media (min-width: 0px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+@media (min-width: 320px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+/* на md */
+@media (min-width: 992px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 45px;
+    }
+}
+/* на lg */
+@media (min-width: 1200px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 50px;
+    }
+}
+
+
