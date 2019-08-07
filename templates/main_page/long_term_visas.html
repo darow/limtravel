@@ -1,0 +1,157 @@
+{% extends 'main.html' %}
+{% load static %}
+
+
+
+{%  block long_term_visas %}
+    <div class="half-bg mb-3" style="background: url('/assets/img/lgtmvss.jpg') no-repeat center 44%; background-size: cover;">
+        <div class="container h-100 mw-100 img-gradient-overlay">
+            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
+                <div class="big-font">
+                    Долгосрочные визы
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countainer">
+        <div class="row p-3">
+            <div class="col text-center big-font">
+                Для чего она нужна
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center pb-5">
+                <h4>Один из важнейших моментов посещения страны – правильно выбрать визу</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center p-5">
+        <div class="col-8 p-md-5">
+            <div class="d-flex justify-content-center">
+                <img src="{% static 'img/lgtmvss1.png' %}">
+            </div>
+            <div>
+                <h2 class="font-weight-bold py-4">
+                    Долгосрочная виза
+                </h2>
+            </div>
+            <div>
+                <h5>
+                    В большинстве случаев для посещения другого государства потребуется получить специальное разрешение от властей. Формальным подтверждением такого разрешения является виза, которую выдает соответствующее посольство. Данная практика была введена после Второй Мировой Войны как средство контроля над перемещениями иностранных граждан.
+                    Если в начале визы имели достаточно разобщенный характер в плане оформления и различались только лишь на въездные и выездные, то сейчас они уже претерпели значительные изменения. Они стали не только обязательными для посещения многих государств, но и стали разделяться по категориям.
+                </h5>
+            </div>
+
+        </div>
+        <div class="col p-5">
+            <div class="d-flex justify-content-center">
+                <img src="{% static 'img/lgtmvss2.png' %}">
+            </div>
+            <div class="container">
+                <div class="row flex-nowrap pt-5">
+                    <h5 class="font-weight-bold pr-1">Тип А </h5>
+                    <h5> — аэропортовая транзитная виза.</h5>
+                </div>
+
+                <div class="row flex-nowrap">
+                    <h5 class="font-weight-bold pr-1">Тип B</h5>
+                    <h5> — шенгенская транзитная виза.</h5>
+                </div>
+                <div class="row flex-nowrap">
+                    <h5 class="font-weight-bold pr-1">Тип C </h5>
+                    <h5> — шенгенская краткосрочная виза.</h5>
+                </div>
+                <div class="row flex-nowrap">
+                    <h5 class="font-weight-bold pr-1">Тип D </h5>
+                    <h5> — длительная национальная виза.</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-5">
+        <div class="col big-font text-center pb-5">
+            Основные типы долгосрочных виз
+        </div>
+    </div>
+    <div class="row pb-5">
+        <div class="col pl-5">
+            <h5 class="font-weight-bold pb-3">Гостевая виза<br></h5>
+            <h5>Долгосрочная гостевая виза чаще всего подразумевает посещение родственников или близких знакомых на срок вплоть до нескольких лет. При этом требуется приглашение и при необходимости достаточное обоснование и подтверждение родственных связей между приглашающей стороной и приглашенным.</h5>
+        </div>
+        <div class="col pl-3">
+            <h5 class="font-weight-bold pb-3">Рабочая виза<br></h5>
+            <h5>Для официального оформления наемного труда за рубежом необходимо получить рабочую визу. Такая виза является разрешением для пребывания на весь срок действия трудового контракта или соглашения. Для получения такой визы требуется приглашение от той компании, в которой намерен работать приглашенный.</h5>
+        </div>
+        <div class="col pl-3">
+            <h5 class="font-weight-bold pb-3">Студенческая виза<br></h5>
+            <h5>Для прохождения обучения в зарубежных вузах оформляется студенческая или учебная виза, позволяющая пребывать на территории страны весь срок обучения и в некоторых случаях, неоднократно пересекать границу. Для получения обязательно представляются подтверждающие документы, указывающие, что учебное заведение готово принять иностранного ученика.</h5>
+        </div>
+        <div class="col pl-3">
+            <h5 class="font-weight-bold pb-3">Переезд на ПМЖ<br></h5>
+            <h5>Условия получения такой визы существенно различаются от государства к государству и зависят от особенностей менталитета, обычаев и даже вероисповедания. Она дает возможность находиться в гостях у родственников продолжительное время, вплоть до нескольких лет или же являться отправной точкой для получения членами семейства единого гражданства.</h5>
+        </div>
+    </div>
+    <div class="row p-5">
+        <div class="col">
+            <div class="container">
+                {% with 'Австралия Австрия Бельгия Болгария Великобритания Венгрия Вьетнам Гана Германия Греция Дания Индия Иран Ирландия Испания' as list %}
+                    {% for i in list.split %}
+
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="font-weight-bold"><u>{{ i }}</u></h5>
+                            </div>
+                            <div class="col text-right">
+                                <h5>3 дня</h5>
+                            </div>
+                        </div>
+                        <br>
+                    {% endfor %}
+                {% endwith %}
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="container">
+                {% with 'Канада Кипр Китай Латвия Литва Мальта Мексика Нидерланды Норвегия Польша Португалия Румыния Сингапур Словакия Словения  ' as list %}
+                    {% for i in list.split %}
+
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="font-weight-bold"><u>{{ i }}</u></h5>
+                            </div>
+                            <div class="col text-right">
+                                <h5>3 дня</h5>
+                            </div>
+                        </div>
+                        <br>
+                    {% endfor %}
+                {% endwith %}
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="container">
+                {% with 'США Тайланд Франция Финляндия Франция Хорватия Чехия Швеция Швейцария Шри-Ланка Эстония Япония Франция ОАЭ Италия' as list %}
+                    {% for i in list.split %}
+
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="font-weight-bold"><u>{{ i }}</u></h5>
+                            </div>
+                            <div class="col text-right">
+                                <h5>3 дня</h5>
+                            </div>
+                        </div>
+                        <br>
+                    {% endfor %}
+                {% endwith %}
+
+            </div>
+        </div>
+    </div>
+
+{% endblock long_term_visas %}

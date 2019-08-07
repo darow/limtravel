@@ -1,0 +1,65 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{%  block tourist_visas %}
+    <div class="half-bg mb-3" style="background: url('/assets/img/oblaka1.jpg') no-repeat center ; background-size: cover;">
+        <div class="container h-100 mw-100 img-gradient-overlay">
+            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
+                <div class="big-font">
+                    Загранпаспорт
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countainer">
+        <div class="row justify-content-center p-5">
+            <div class="col-8 p-md-5">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'img/int_pass.png' %}">
+                </div>
+            </div>
+            <div class="col p-5">
+                <div class="row">
+                    <div class="col">
+                        <h5>Отличие обычного загранпаспорта (5 лет) от биометрического (10 лет), помимо срока действия, заключается в том, что в биометрический встроена специальная микросхема, содержащая фотографию владельца, а также его данные:<br> <br>
+                            <ul>
+                                <li>фамилию, имя, отчество;</li>
+                                <li>дату рождения;</li>
+                                <li>номер паспорта, дату его выдачи и окончания срока действия;</li>
+                                <li>также любые дополнительные сведения о владельце.</li>
+                            </ul>
+                            Стандарты предусматривают возможность хранения в микросхеме специальной биометрической информации, например, рисунок радужной оболочки глаза или отпечатков пальцев. Отличием биометрического паспорта от обычного является наличие информации, недоступной его владельцу, и возможности её дистанционного считывания.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #f5f5f5">
+        <div class="container" >
+            <div class="big-font text-center p-4">
+                Наши услуги
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="font">
+                        <li>Подготовка документов;</li>
+                        <li>Оформление загранпаспорта на 5 лет (без прописки);</li>
+                        <li>Оформление загранпаспорта на 5 лет (местная прописка);</li>
+                        <li>Оформление биометрического паспорта (без прописки);</li>
+                        <li>Оформление биометрического паспорта (местная прописка).</li>
+
+                    </ul>
+                </div>
+                <div class="col">
+                    <div class="font-weight-bold">Сроки:</div>
+                    <div>Стандартный срок рассмотрения – 30 дней<br>
+                        Для иногородних – 90 дней</div>
+                    <br>
+                    <div class="font-weight-bold">Госпошлина оплачивается отдельно:</div>
+                    <div>Оформление загранпаспорта на 5 лет – 2500 рублей<br>
+                        Оформление загранпаспорта на 10 лет – 5000 рублей</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock tourist_visas %}
