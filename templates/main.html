@@ -8,10 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS --><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-{#  <!-- Bootstrap core CSS -->#}
-  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-{#  <!-- Material Design Bootstrap -->#}
-  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    {#  <!-- Bootstrap core CSS -->#}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/custom-style.css' %}">
     <title>demo</title>
@@ -39,22 +37,22 @@
             </ul>
         </div>
         <div class="container flex-nowrap">
-        <div class="mr-auto order-0">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse1">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
-        <div class="mx-auto">
-            <a class="navbar-brand mx-auto" href="/">
-                <img src="{% static "../assets/img/logo.png" %}" class="image" height="70" alt="logo">
-            </a>
-        </div>
+            <div class="mr-auto order-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse1">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="mx-auto">
+                <a class="navbar-brand mx-auto" href="/">
+                    <img src="{% static "../assets/img/logo.png" %}" class="image" height="70" alt="logo">
+                </a>
+            </div>
 
-        <div class="ml-auto order-1">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse2">
-                <img src="{% static "../assets/img/user.svg" %}" class="image" height="30" alt="user">
-            </button>
-        </div>
+            <div class="ml-auto order-1">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse2">
+                    <img src="{% static "../assets/img/user.svg" %}" class="image" height="30" alt="user">
+                </button>
+            </div>
         </div>
         <div class="navbar-collapse collapse w-100 order-3 collapse2 text-right">
             <ul class="navbar-nav ml-auto">
@@ -85,6 +83,10 @@
 {%  block tourist_visas %} {% endblock %}
 {%  block long_term_visas %}{% endblock %}
 {%  block invitations %} {% endblock %}
+<div class="big-font text-center p-5">
+    Найдите билеты прямо сейчас!
+</div>
+<script charset="utf-8" src="//www.travelpayouts.com/widgets/73e7d23adbc4b7e151dd295bc054d37b.js?v=1838" async></script>
 
 <footer class="page-footer font-small unique-color-light">
     <div style="background-color: #1D91D0;">
@@ -121,23 +123,23 @@
                     <p>Федеральная сеть визовых центров. Открыта в 2018 году. Специализируемся на выдаче виз, загранпаспортов, рабочих приглашений.</p>
 
                 </div>
-{#                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">#}
-{#                    <h6 class="text-uppercase font-weight-bold">Products</h6>#}
-{##}
-{#                    <hr class="black accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">#}
-{#                    <p>#}
-{#                        <a href="#!">Content</a>#}
-{#                    </p>#}
-{#                    <p>#}
-{#                        <a href="#!">Content</a>#}
-{#                    </p>#}
-{#                    <p>#}
-{#                        <a href="#!">Content</a>#}
-{#                    </p>#}
-{#                    <p>#}
-{#                        <a href="#!">Content Content</a>#}
-{#                    </p>#}
-{#                </div>#}
+                {#                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 ">#}
+                {#                    <h6 class="text-uppercase font-weight-bold">Products</h6>#}
+                {##}
+                {#                    <hr class="black accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">#}
+                {#                    <p>#}
+                {#                        <a href="#!">Content</a>#}
+                {#                    </p>#}
+                {#                    <p>#}
+                {#                        <a href="#!">Content</a>#}
+                {#                    </p>#}
+                {#                    <p>#}
+                {#                        <a href="#!">Content</a>#}
+                {#                    </p>#}
+                {#                    <p>#}
+                {#                        <a href="#!">Content Content</a>#}
+                {#                    </p>#}
+                {#                </div>#}
                 <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                     <h6 class="text-uppercase font-weight-bold">Useful links</h6>
                     <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
@@ -151,18 +153,18 @@
                         <a href="#!">Контакты</a>
                     </p>
                 </div>
-{#                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">#}
-{#                    <h6 class="text-uppercase font-weight-bold">Филиалы</h6>#}
-{#                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">#}
-{#                    <p>#}
-{#                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>#}
-{#                    <p>#}
-{#                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>#}
-{#                    <p>#}
-{#                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>#}
-{#                    <p>#}
-{#                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>#}
-{#                </div>#}
+                {#                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">#}
+                {#                    <h6 class="text-uppercase font-weight-bold">Филиалы</h6>#}
+                {#                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">#}
+                {#                    <p>#}
+                {#                        <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>#}
+                {#                    <p>#}
+                {#                        <i class="fas fa-envelope mr-3"></i> info@example.com</p>#}
+                {#                    <p>#}
+                {#                        <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>#}
+                {#                    <p>#}
+                {#                        <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>#}
+                {#                </div>#}
             </div>
         </div>
     </div>
@@ -179,13 +181,13 @@
 {#<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>#}
 {#<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>#}
 <!-- JQuery -->
-  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
-  <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
 
 </body>
 </html>
