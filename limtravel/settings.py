@@ -124,11 +124,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/assets/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "assets"),
+)
 
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
+# STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
 
 
