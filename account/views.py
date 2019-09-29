@@ -9,7 +9,8 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            # user login
+            user = auth.authenticate(username=request.POST['username'], password=request.POST['password1'])
+            auth.login(request, user)
             return redirect('/')
     else:
         form = UserCreationForm()
@@ -39,7 +40,7 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect("/account/check")
+    return redirect("/")
 
 
 def check(request):
