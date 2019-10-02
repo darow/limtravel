@@ -1,30 +1,33 @@
-{% extends 'main.html' %}
+{% extends 'extend.html' %}
 {% load static %}
 
+{% block title %}Главная страница{% endblock %}
 
-
-{%  block main_page %}
-    <div class="full-bg" style="background: url('/assets/img/bgr-mn.jpg') no-repeat center; background-size: cover;">
-        <div class="container h-100 mw-100 img-gradient-overlay-dark">
-            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
-                <div class="col big-font pr-5">
-                    Визы в 45 стран<br>
-                    мира
-                </div>
-                <div class="col pl-5">
-                    <h2>Срочное оформление<br>
-                        визы за 3 дня</h2>
-                    <form class="form-inline">
-                        <div class="form-group mx-sm-3 mb-2">
-                            <label for="inputPassword2" class="sr-only">Password</label>
-                            <input type="text" class="form-control" id="inputPassword2" placeholder="Введите телефон">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-2">Отправить</button>
-                    </form>
-
-                </div>
+{%  block content %}
+    <div class="h-100 container-fluid" id="main_bg">
+        {% if msg %}
+            <div style="padding-top: 80px;">
+            <div class="col-12 text-center border border-primary main_page_msg">{{ msg }}
             </div>
+            </div>
+        {% endif %}
+        <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold text-shadow">
+            <div class="col big-font pr-5">
+                Визы в 45 стран<br>
+                мира
+            </div>
+            <div class="col pl-5">
+                <h2>Срочное оформление<br>
+                    визы за 3 дня</h2>
+{#                <form class="form-inline">#}
+{#                    <div class="form-group mx-sm-3 mb-2">#}
+{#                        <label for="inputPassword2" class="sr-only">Password</label>#}
+{#                        <input type="text" class="form-control" id="inputPassword2" placeholder="Введите телефон">#}
+{#                    </div>#}
+{#                    <button type="submit" class="btn btn-primary mb-2">Отправить</button>#}
+{#                </form>#}
 
+            </div>
         </div>
     </div>
     <div class="container  pt-5">
@@ -249,7 +252,4 @@
 
     </div>
 
-
-
-
-{% endblock main_page %}
+{% endblock content %}

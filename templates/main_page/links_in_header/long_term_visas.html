@@ -1,12 +1,10 @@
-{% extends 'main.html' %}
+{% extends 'extend.html' %}
 {% load static %}
 
-
-
-{%  block long_term_visas %}
-    <div class="half-bg mb-3" style="background: url('/assets/img/lgtmvss.jpg') no-repeat center 44%; background-size: cover;">
-        <div class="container h-100 mw-100 img-gradient-overlay">
-            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
+{%  block content %}
+    <div class="h-50 mb-3" style="background: url('/assets/img/long_term_bgr.jpg') no-repeat top 250% left 65% fixed; margin-top: 75px;">
+        <div class="container h-100 mw-100">
+            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold text-shadow">
                 <div class="big-font">
                     Долгосрочные визы
                 </div>
@@ -154,4 +152,4 @@
         </div>
     </div>
 
-{% endblock long_term_visas %}
+{% endblock content %}

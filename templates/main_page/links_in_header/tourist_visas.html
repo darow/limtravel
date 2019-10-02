@@ -1,11 +1,11 @@
-{% extends 'main.html' %}
+{% extends 'extend.html' %}
 {% load static %}
 
 
 
-{%  block tourist_visas %}
-    <div class="half-bg mb-3" style="background: url('/assets/img/sidney.jpg') no-repeat center; background-size: cover;">
-        <div class="container h-100 mw-100 img-gradient-overlay">
+{%  block content %}
+    <div class="h-50 mb-3" style="background: url('/assets/img/oblaka2.jpg') no-repeat center; background-size: cover;">
+        <div class="container h-100 mw-100 img-gradient-overlay text-shadow">
             <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
                 <div class="big-font">
                     Туристические визы
@@ -90,66 +90,66 @@
                 </div>
             </div>
         </div>
-{#        СРОКИ  ОФОРМЛЕНИЯ ВИЗ#}
-{#        <div class="row p-5">#}
-{#            <div class="col">#}
-{#                <div class="container">#}
-{#                    {% with 'Австралия Австрия Бельгия Болгария Великобритания Венгрия Вьетнам Гана Германия Греция Дания Индия Иран Ирландия Испания' as list %}#}
-{#                        {% for i in list.split %}#}
-{##}
-{#                            <div class="row">#}
-{#                                <div class="col">#}
-{#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
-{#                                </div>#}
-{#                                <div class="col text-right">#}
-{#                                    <h5>3 дня</h5>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <br>#}
-{#                        {% endfor %}#}
-{#                    {% endwith %}#}
-{##}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col">#}
-{#                <div class="container">#}
-{#                    {% with 'Канада Кипр Китай Латвия Литва Мальта Мексика Нидерланды Норвегия Польша Португалия Румыния Сингапур Словакия Словения  ' as list %}#}
-{#                        {% for i in list.split %}#}
-{##}
-{#                            <div class="row">#}
-{#                                <div class="col">#}
-{#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
-{#                                </div>#}
-{#                                <div class="col text-right">#}
-{#                                    <h5>3 дня</h5>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <br>#}
-{#                        {% endfor %}#}
-{#                    {% endwith %}#}
-{##}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="col">#}
-{#                <div class="container">#}
-{#                    {% with 'США Тайланд Франция Финляндия Франция Хорватия Чехия Швеция Швейцария Шри-Ланка Эстония Япония Франция ОАЭ Италия' as list %}#}
-{#                        {% for i in list.split %}#}
-{##}
-{#                            <div class="row">#}
-{#                                <div class="col">#}
-{#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
-{#                                </div>#}
-{#                                <div class="col text-right">#}
-{#                                    <h5>3 дня</h5>#}
-{#                                </div>#}
-{#                            </div>#}
-{#                            <br>#}
-{#                        {% endfor %}#}
-{#                    {% endwith %}#}
-{##}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
+        {#        СРОКИ  ОФОРМЛЕНИЯ ВИЗ#}
+        {#        <div class="row p-5">#}
+        {#            <div class="col">#}
+        {#                <div class="container">#}
+        {#                    {% with 'Австралия Австрия Бельгия Болгария Великобритания Венгрия Вьетнам Гана Германия Греция Дания Индия Иран Ирландия Испания' as list %}#}
+        {#                        {% for i in list.split %}#}
+        {##}
+        {#                            <div class="row">#}
+        {#                                <div class="col">#}
+        {#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
+        {#                                </div>#}
+        {#                                <div class="col text-right">#}
+        {#                                    <h5>3 дня</h5>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <br>#}
+        {#                        {% endfor %}#}
+        {#                    {% endwith %}#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col">#}
+        {#                <div class="container">#}
+        {#                    {% with 'Канада Кипр Китай Латвия Литва Мальта Мексика Нидерланды Норвегия Польша Португалия Румыния Сингапур Словакия Словения  ' as list %}#}
+        {#                        {% for i in list.split %}#}
+        {##}
+        {#                            <div class="row">#}
+        {#                                <div class="col">#}
+        {#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
+        {#                                </div>#}
+        {#                                <div class="col text-right">#}
+        {#                                    <h5>3 дня</h5>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <br>#}
+        {#                        {% endfor %}#}
+        {#                    {% endwith %}#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col">#}
+        {#                <div class="container">#}
+        {#                    {% with 'США Тайланд Франция Финляндия Франция Хорватия Чехия Швеция Швейцария Шри-Ланка Эстония Япония Франция ОАЭ Италия' as list %}#}
+        {#                        {% for i in list.split %}#}
+        {##}
+        {#                            <div class="row">#}
+        {#                                <div class="col">#}
+        {#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
+        {#                                </div>#}
+        {#                                <div class="col text-right">#}
+        {#                                    <h5>3 дня</h5>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <br>#}
+        {#                        {% endfor %}#}
+        {#                    {% endwith %}#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
     </div>
 
-{% endblock tourist_visas %}
+{% endblock content %}

@@ -1,0 +1,203 @@
+.orange-gradient {
+    background: #f7971e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #f7971e, #ffd200); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #f7971e, #ffd200);
+}
+
+.grey-gradient {
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.megatron-gradient {
+    background: #c6ffdd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.orange-blue-gradient {
+    background: #c6ffdd; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom right, #fb1, #29d); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom right, #fb1, #29d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.main_page_msg {
+    background-color: aquamarine;
+    opacity: 0.8;
+}
+
+div.message-container {
+    position: relative;
+    display: inline-block;
+}
+
+.message-container .message {
+    visibility: visible;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.message-container .message::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+.message-container:hover .message {
+    visibility: visible;
+    opacity: 1;
+}
+
+.navbar {
+    opacity: 0.8;
+}
+
+.text-shadow {
+    text-shadow: 1px 1px 10px #000;
+}
+
+.height30 {
+    height: 30px;
+}
+
+image {
+    display: block;
+    width: auto;
+    height: 100%;
+}
+.thumbnail {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.client {
+    height: 200px;
+}
+body {
+    font-family: Helvetica;
+    font-size: 16px;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+hr {
+    border-color:#EE8019;
+    width: 60px;
+}
+
+.message-containerimonial-group > .row {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.message-containerimonial-group > .row > .col-sm-4 {
+    display: inline-block;
+    float: none;
+}
+.message-containerimonial-group > .row > .col-sm-4 > .fixed-size {
+    height: 200px;
+
+}
+#main_bg {
+    background: url('/assets/img/bgr-mn.jpg') no-repeat  left 60% center;
+    height: 900px;
+}
+
+.half-bg {
+    height: 40%;
+}
+
+.flex-nowrap {
+    overflow-wrap: break-word;
+    flex-wrap: nowrap;
+}
+@media (min-width: 0px) {
+    .dropdown>.dropdown-menu {
+        display: block;
+        position: relative;
+        right: 5px;
+        height: 90px;
+    }
+    .dropdown-item {
+        display: block;
+        text-align: right;
+    }
+}
+/*es*/
+@media (min-width: 0px) {
+    .display-4 {
+        font-size: 40px;
+    }
+    .big-font {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+/*sm*/
+@media (min-width: 576px) {
+    .display-4 {
+        font-size: 40px;
+    }
+    .big-font {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+/*md*/
+@media (min-width: 768px) {
+    .dropdown>.dropdown-menu {
+        display: none;
+    }
+    .dropdown:hover>.dropdown-menu {
+        display: table-header-group;
+        position: relative;
+        top: 0;
+        left:20%;
+    }
+    .dropdown-item {
+        text-align: left;
+    }
+    .display-4 {
+        font-size: 56px;
+    }
+    .big-font {
+        font-weight: bold;
+        font-size: 40px;
+    }
+}
+/*lg*/
+@media (min-width: 992px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 45px;
+    }
+}
+/*xl*/
+@media (min-width: 1200px) {
+    .big-font {
+        font-weight: bold;
+        font-size: 50px;
+    }
+}
+
+

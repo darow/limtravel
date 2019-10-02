@@ -1,0 +1,161 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="/assets/css/custom_style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>limtravel | {% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{% static 'img/micrologo.png' %}" type="image/png">
+</head>
+<body>
+<nav class="navbar navbar-default fixed-top navbar-expand-md bg-white inline-block navbar-light" >
+    <table>
+        <div class="containter navbar-collapse collapse w-100 order-0 collapse1 text-left" onClick="event.stopPropagation();">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="navbar-brand mx-auto order-1" href="/">
+                        <img src="{% static "../assets/img/logo.png" %}" class="image" height="50" alt="logo">
+                    </a>
+                </li>
+                <li class="nav-item my-auto pl-lg-2">
+                    <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link text-nowrap" href="/tourist_visas">Туристические визы</a>
+                </li>
+                <li class="nav-item my-auto">
+                    <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link text-nowrap" href="/long-term_visas">Долгосрочные визы</a>
+                </li>
+                <li class="nav-item my-auto">
+                    <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link" href="/international_passport">Загранпаспорт</a>
+                </li>
+                <li class="nav-item my-auto">
+                    <a data-toggle="collapse" data-target=".navbar-collapse" class="nav-link" href="/invitations">Приглашения</a>
+                </li>
+            </ul>
+        </div>
+        <div class="container flex-nowrap">
+            <div class="mr-auto order-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse1">
+                    <span class="navbar-toggler-icon height30"></span>
+                </button>
+            </div>
+            {#            <div class="ml-auto">#}
+            {#                <a class="navbar-brand mx-auto order-1" href="/">#}
+            {#                    <img src="{% static "../assets/img/logo.png" %}" class="image" height="50" alt="logo">#}
+            {#                </a>#}
+            {#            </div>#}
+            <div class="ml-auto order-2">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse2">
+                    <img src="{% static "../assets/img/user.svg" %}" class="image" height="30" alt="user">
+                </button>
+            </div>
+        </div>
+        <div class="navbar-collapse collapse w-100 order-1 collapse2 text-right">
+            <ul class="navbar-nav ml-auto ">
+                {% if username %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{username}}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="/account/private_aria">Личный кабинет</a>
+                            <a class="dropdown-item" href="/account/logout/">Выйти</a>
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href={% url "login" %}>Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signup' %}">Регистрация</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </table>
+</nav>
+
+{% block content %} {% endblock %}
+
+<div class="container-fluid p-3 orange-blue-gradient text-shadow text-light">
+    <div class="big-font text-center p-2">
+        Путешествие зовет!
+    </div>
+
+    <div class="col text-center pb-5">
+        <h4>Забронируйте билеты на самолет и место в отеле</h4>
+    </div>
+    <script charset="utf-8" src="//www.travelpayouts.com/widgets/73e7d23adbc4b7e151dd295bc054d37b.js?v=1838" async></script>
+</div>
+
+<footer class="page-footer font-small unique-color-light">
+    <div style="background-color: #1D91D0;">
+        <div class="container">
+            <ul class="pt-3 list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/%D0%92%D0%B8%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9-%D1%86%D0%B5%D0%BD%D1%82%D1%80-246433339345947/"
+                       class="btn-floating btn-fb mx-1">
+                        <img src="{% static "../assets/img/facebook.svg" %}" width="50" height="50" alt="facebook_logo">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://vk.com/limtravel" class="btn-floating btn-tw mx-1">
+                        <img src="{% static "../assets/img/vk.svg" %}" width="50" height="50" alt="vk_logo">
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://instagram.com/lim_travel24"
+                       class="btn-floating btn-gplus mx-1">
+                        <img src="{% static "../assets/img/instagram.svg" %}" width="50" height="50" alt="instagram_logo">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <img src="{% static "../assets/img/call.svg" %}" width="30" height="30" class="float-left pr-2" alt="phone_image">
+            <div class="container ml-20">
+                <h4 class="text-uppercase font-weight-bold">8(800) 511-83-41</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">lim travel</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="border-color:#EE8019; width: 60px;">
+                    <p>Федеральная сеть визовых центров. Открыта в 2018 году. Специализируемся на выдаче виз, загранпаспортов, рабочих приглашений.</p>
+
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">информация</h6>
+                    <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto ">
+                    <p>
+                        <a href="/about_us">О нас</a>
+                    </p>
+                    <p>
+                        <a href="/payment">Оплата</a>
+                    </p>
+                    <p>
+                        <a href="/contacts">Контакты</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #FACE0E;" class="footer-copyright text-center py-3">
+        © 2018-2019 Company Inc. Все права защищены.
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- links to popper js and bootsrap js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+{#<!-- JQuery -->#}
+{#<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>#}
+{#<!-- Bootstrap tooltips -->#}
+{#<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>#}
+</body>
+</html>

@@ -1,0 +1,81 @@
+{% extends 'extend.html' %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{%  block content %}
+    <div class="text-center orange-blue-gradient" style="padding-top: 100px; padding-bottom: 20px;">
+        <h2 class="text-center text-shadow text-light">Личный кабинет</h2>
+    </div>
+
+    {% if partner_link %}
+        <div class="container-fluid  text-center grey-gradient p-5">
+            <h1 class="display-4 pb-4 text-shadow text-light">Ваша партнерская ссылка:</h1>
+            <div class="row">
+                <input id="myInput" class="col-md-9 w-md-50 mx-2 mx-md-0" type="text" value="{{ partner_link }}">
+                <div class="col-md-3 message-container pt-3 pt-md-0">
+                    <button class="btn btn-info btn-sm" onclick="myFunction()" onmouseout="outFunc()">
+                        <span class="message" id="myTooltip">Скопировать ссылку в буфер обмена</span>
+                        Скопировать
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function myFunction() {
+                var copyText = document.getElementById("myInput");
+                copyText.select();
+                document.execCommand("copy");
+
+                var tooltip = document.getElementById("myTooltip");
+                tooltip.innerHTML = "Скопировано: " + copyText.value;
+            }
+        </script>
+    {% else %}
+        <div class="container text-center">
+            <a type="button" href="/account/became_partner" target="_self" class="btn btn-success">Создать партнерскую ссылку</a>
+        </div>
+    {% endif %}
+
+    {% if invited_users %}
+        <div class="orange-gradient p-3">
+            <div class="container mt-3 w-100" >
+                <h1 class="display-4 pb-4">Приглашенные пользователи</h1>
+                <p class="pb-4">Список пользователей, зарегистрировавшихся по вашей партнерской ссылке:</p>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Логин</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Дата регистрации</th>
+                        <th scope="col">Воспользовался услугами</th>
+                        <th scope="col">Вознаграждение получено</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in invited_users %}
+                        <tr>
+                            <th scope="row">{{ forloop.counter0|add:"1" }}</th>
+                            <td>{{ user.username }}</td>
+                            <td>{{ user.email }}</td>
+                            <td>{{ user.date_joined }}</td>
+                            {% if user.has_purchases %}
+                                <td><i class="fas fa-check" style="color:green"></i></td>
+                            {% else %}
+                                <td><i class="fas fa-times" style="color:red"></i></td>
+                            {% endif %}
+                            {% if user.paid_for_partner %}
+                                <td><i class="fas fa-check" style="color:green"></i></td>
+                            {% else %}
+                                <td><i class="fas fa-times" style="color:red"></i></td>
+                            {% endif %}
+                        </tr>
+                        </tbody>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    {% endif %}
+
+{% endblock content %}
