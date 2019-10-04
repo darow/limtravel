@@ -1,0 +1,23 @@
+{% extends 'extend.html' %}
+
+{% block title %}Зарегистрироваться{% endblock %}
+
+{% block content %}
+    <div style="background-color: #cccccc; margin-top: 150px;" class="container py-2">
+        <h1 class="display-4">Регистрация</h1>
+    </div>
+    <div class="container border rounded py-3" style="background-color: #EEF2EF;">
+        <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                <div class="fieldWrapper">
+
+                <div class="mt-2">{{ field.label_tag }}</div>
+                {{ field }}
+                <div class="text-danger">{{ field.errors }}</div>
+            </div>
+            {% endfor %}
+            <button type="submit" class="btn btn-success mt-2">Зарегистрироваться</button>
+        </form>
+    </div>
+{% endblock %}

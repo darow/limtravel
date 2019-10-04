@@ -1,0 +1,155 @@
+{% extends 'extend.html' %}
+{% load static %}
+
+
+
+{%  block content %}
+    <div class="h-50 mb-3" style="background: url('/assets/img/oblaka2.jpg') no-repeat center; background-size: cover;">
+        <div class="container h-100 mw-100 img-gradient-overlay text-shadow">
+            <div class="row h-100 align-items-center justify-content-center text-light font-weight-bold">
+                <div class="big-font">
+                    Туристические визы
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="countainer">
+        <div class="row p-3">
+            <div class="col text-center big-font">
+                Популярное направление
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center pb-5">
+                <h4>Незабываемый отдых в солнечной Италии</h4>
+            </div>
+
+        </div>
+        <div class="row justify-content-center p-5">
+            <div class="col-8 p-md-5">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'img/tourist_visas1.png' %}">
+                </div>
+                <div>
+                    <h2 class="font-weight-bold py-4">
+                        Италия
+                    </h2>
+                </div>
+                <div>
+                    <h5>
+                        Италия - это одно из самых уникальных и очаровательных мест в мире. Она имеет одни из самых красивых и разнообразных ландшафтов в Европе, самый большой в мире клад сокровищ истории, культуры и искусства, благоприятный тёплый климат и вкусную аутентичную кухню.
+                        Это страна с величайшим культурным, историческим и художественным наследием, колыбель одной из величайших империй в истории человечества и эпохи Возрождения.
+                    </h5>
+                </div>
+            </div>
+            <div class="col p-5">
+                <div class="d-flex justify-content-center">
+                    <img src="{% static 'img/tourist_visas2.png' %}">
+                </div>
+                <div class="container">
+                    <div class="row flex-nowrap pt-5">
+                        <div class="col">
+                            <h5 class="font-weight-bold">Сроки</h5>
+                        </div>
+                        <div class="col text-right">
+                            <h5 class="font-weight-bold">от 3 дней</h5>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <h5>При наличии всех документов</h5>
+                        </div>
+                    </div>
+                    <div class="row flex-nowrap pt-5">
+                        <div class="col">
+                            <h5 class="font-weight-bold">Стоимость</h5>
+                        </div>
+                        <div class="col text-right">
+                            <h5 class="font-weight-bold">По запросу</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h5>Не включает консульские сборы</h5>
+                        </div>
+                    </div>
+                    <div class="row flex-nowrap pt-5">
+                        <div class="col">
+                            <h5 class="font-weight-bold">Документы</h5>
+                        </div>
+                        <div class="col text-right">
+                            <h5 class="font-weight-bold">2 документа</h5>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h5>Паспорт РФ и Загранпаспорт</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {#        СРОКИ  ОФОРМЛЕНИЯ ВИЗ#}
+        {#        <div class="row p-5">#}
+        {#            <div class="col">#}
+        {#                <div class="container">#}
+        {#                    {% with 'Австралия Австрия Бельгия Болгария Великобритания Венгрия Вьетнам Гана Германия Греция Дания Индия Иран Ирландия Испания' as list %}#}
+        {#                        {% for i in list.split %}#}
+        {##}
+        {#                            <div class="row">#}
+        {#                                <div class="col">#}
+        {#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
+        {#                                </div>#}
+        {#                                <div class="col text-right">#}
+        {#                                    <h5>3 дня</h5>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <br>#}
+        {#                        {% endfor %}#}
+        {#                    {% endwith %}#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col">#}
+        {#                <div class="container">#}
+        {#                    {% with 'Канада Кипр Китай Латвия Литва Мальта Мексика Нидерланды Норвегия Польша Португалия Румыния Сингапур Словакия Словения  ' as list %}#}
+        {#                        {% for i in list.split %}#}
+        {##}
+        {#                            <div class="row">#}
+        {#                                <div class="col">#}
+        {#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
+        {#                                </div>#}
+        {#                                <div class="col text-right">#}
+        {#                                    <h5>3 дня</h5>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <br>#}
+        {#                        {% endfor %}#}
+        {#                    {% endwith %}#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#            <div class="col">#}
+        {#                <div class="container">#}
+        {#                    {% with 'США Тайланд Франция Финляндия Франция Хорватия Чехия Швеция Швейцария Шри-Ланка Эстония Япония Франция ОАЭ Италия' as list %}#}
+        {#                        {% for i in list.split %}#}
+        {##}
+        {#                            <div class="row">#}
+        {#                                <div class="col">#}
+        {#                                    <h5 class="font-weight-bold"><u>{{ i }}</u></h5>#}
+        {#                                </div>#}
+        {#                                <div class="col text-right">#}
+        {#                                    <h5>3 дня</h5>#}
+        {#                                </div>#}
+        {#                            </div>#}
+        {#                            <br>#}
+        {#                        {% endfor %}#}
+        {#                    {% endwith %}#}
+        {##}
+        {#                </div>#}
+        {#            </div>#}
+        {#        </div>#}
+    </div>
+
+{% endblock content %}
